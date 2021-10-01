@@ -30,7 +30,7 @@ while k<=len(array_profit)-2:
     change_n1_tot += change_n1
     if max_inc < change_n1:
         max_inc = change_n1
-        max_index=l
+        max_index = l
     if change_n1 < min_dec:
         min_dec = change_n1
         min_index = l

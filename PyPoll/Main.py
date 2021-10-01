@@ -10,9 +10,9 @@ def displayResult(sorted_result, count_votes):
         print(f'Total Votes : {count_votes} \n------------------------')
         
         for key, value in sorted_result:
-         percent_candidate = (value/count_votes) *100
-         print(f'{key} : {round(percent_candidate,2)} % ({value})')
-         f.write(f'{key} : {round(percent_candidate,2)} % ({value})\n')
+            percent_candidate = (value/count_votes) *100
+            print(f'{key} : {round(percent_candidate,2)} % ({value})')
+            f.write(f'{key} : {round(percent_candidate,2)} % ({value})\n')
         print("---------------------------")
         f.write("---------------------------\n")
         print(f'Winner: {sorted_result[0][0]}')
@@ -56,7 +56,7 @@ with open("/Users/jobyaugustine/Desktop/Assignments/MyAssignmentRepos/python-cha
 
     dict_result.update({sorted_candidate_list[current-2]:totCandidateCnt})  
     sorted_result = sorted(dict_result.items(), key=operator.itemgetter(1),reverse=True) 
-
+    print(sorted_result)
     # to display results and write to result file       
     displayResult(sorted_result,count_votes)
 
